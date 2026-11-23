@@ -19,7 +19,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MarketingAgency","name":"Qarar Marketing Agency","url":"https://qararmarketing.com/","logo":"https://qararmarketing.com/favicon-512.png","telephone":"+96171774100","areaServed":["Lebanon","Saudi Arabia","Syria"],"sameAs":["https://www.instagram.com/qararmarketing/","https://www.tiktok.com/@qarar.marketing","https://www.facebook.com/qararmarketing"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700;800;900&family=Poppins:wght@300;400;500;600&family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700;800;900&family=Poppins:wght@400;500;600&family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
   :root{
     --wine:#6B091D; --wine-d:#4E0614; --wine-t:#F4E8EB; --wine-t2:#E9D3D8;
@@ -1016,6 +1016,25 @@
     footer{padding-bottom:100px}
   }
 </style>
+<style id="perf-mobile">
+.anim-off,.anim-off *,.anim-off *::before,.anim-off *::after{animation-play-state:paused!important}
+@media (max-width:820px),(hover:none){
+  *,*::before,*::after{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+  header{background:rgba(14,10,11,.96)!important}
+  .tag{background:rgba(22,16,17,.94)!important}
+  .rvm{background:rgba(10,7,8,.92)!important}
+}
+</style>
+<script>
+/* Pause animations in sections that are off screen or when the tab is hidden */
+document.addEventListener('DOMContentLoaded',function(){
+  if(!('IntersectionObserver' in window)) return;
+  var els=[].slice.call(document.querySelectorAll('main > *, .xband, footer'));
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('anim-off',!e.isIntersecting);});},{rootMargin:'150px 0px'});
+  els.forEach(function(el){io.observe(el);});
+  document.addEventListener('visibilitychange',function(){document.documentElement.classList.toggle('anim-off',document.hidden);});
+});
+</script>
 </head>
 <body>
 
@@ -1269,15 +1288,15 @@
       <button class="f-btn" data-f="family" data-i18n="fFamily">Family &amp; education</button>
     </div>
     <div class="reel-grid">
-      <article class="rcase reveal" data-cat="retail"><div class="rimg" style="background-image:url(harkous.jpg)"><img src="harkous.jpg" alt="Edited reel for Harkous Shops supermarket, Arabic subtitle promoting the cheapest chips in Lebanon" decoding="async" fetchpriority="high"><span class="rbadge"><img src="lg-harkous-shops.png" alt="" ></span><span class="rshade"></span><span class="rplay"></span></div><div class="rbody"><div class="meta" data-i18n="r1m">Retail · Supermarket</div><h3>Harkous Shops</h3><p data-i18n="r1p">Weekly offer reels with bold Arabic captions and on-shelf product hooks.</p></div></article>
+      <article class="rcase reveal" data-cat="retail"><div class="rimg" style="background-image:url(harkous.jpg)"><img src="harkous.jpg" alt="Edited reel for Harkous Shops supermarket, Arabic subtitle promoting the cheapest chips in Lebanon" decoding="async" fetchpriority="high"><span class="rbadge"><img loading="lazy" decoding="async" src="lg-harkous-shops.png" alt="" ></span><span class="rshade"></span><span class="rplay"></span></div><div class="rbody"><div class="meta" data-i18n="r1m">Retail · Supermarket</div><h3>Harkous Shops</h3><p data-i18n="r1p">Weekly offer reels with bold Arabic captions and on-shelf product hooks.</p></div></article>
       <article class="rcase reveal" data-cat="hosp"><div class="rimg" style="background-image:url(doha.jpg)"><img src="doha.jpg" alt="Edited reel for Doha Plaza Hotel with the hotel logo and Arabic subtitles" decoding="async" fetchpriority="high"><span class="rbadge txt">Doha Plaza Hotel</span><span class="rshade"></span><span class="rplay"></span></div><div class="rbody"><div class="meta" data-i18n="r2m">Hospitality · Hotel</div><h3>Doha Plaza Hotel</h3><p data-i18n="r2p">Talking-head and room-tour reels with branded logo, subtitles and end card.</p></div></article>
       <article class="rcase reveal" data-cat="fnb"><div class="rimg" style="background-image:url(jazz.jpg)"><img src="jazz.jpg" alt="Edited reel for Jazz Resto in Dbayeh with a creator speaking to camera" decoding="async" fetchpriority="high"><span class="rbadge txt">Jazz Resto</span><span class="rshade"></span><span class="rplay"></span></div><div class="rbody"><div class="meta" data-i18n="r3m">F&amp;B · Restaurant</div><h3>Jazz Resto</h3><p data-i18n="r3p">Creator-led food reels in Lebanese Arabic with a branded contact end card.</p></div></article>
-      <article class="rcase reveal" data-cat="fnb"><div class="rimg" style="background-image:url(sift.jpg)"><img src="sift.jpg" alt="Edited reel for Sift Bakery showing a takeaway bag with on-screen text" decoding="async" fetchpriority="high"><span class="rbadge"><img src="lg-sift-bakery.png" alt="" ></span><span class="rshade"></span><span class="rplay"></span></div><div class="rbody"><div class="meta" data-i18n="r4m">F&amp;B · Bakery</div><h3>Sift Bakery</h3><p data-i18n="r4p">POV-style reels with trend-led on-screen text for sugar-free cookies.</p></div></article>
+      <article class="rcase reveal" data-cat="fnb"><div class="rimg" style="background-image:url(sift.jpg)"><img src="sift.jpg" alt="Edited reel for Sift Bakery showing a takeaway bag with on-screen text" decoding="async" fetchpriority="high"><span class="rbadge"><img loading="lazy" decoding="async" src="lg-sift-bakery.png" alt="" ></span><span class="rshade"></span><span class="rplay"></span></div><div class="rbody"><div class="meta" data-i18n="r4m">F&amp;B · Bakery</div><h3>Sift Bakery</h3><p data-i18n="r4p">POV-style reels with trend-led on-screen text for sugar-free cookies.</p></div></article>
       <article class="rcase reveal" data-cat="beauty"><div class="rimg" style="background-image:url(abousaleh.jpg)"><img src="abousaleh.jpg" alt="Edited reel for Abou Saleh Beauty Lounge showing a nail treatment" decoding="async" fetchpriority="high"><span class="rbadge txt">Abou Saleh Beauty Lounge</span><span class="rshade"></span><span class="rplay"></span></div><div class="rbody"><div class="meta" data-i18n="r5m">Beauty · Salon</div><h3>Abou Saleh Beauty Lounge</h3><p data-i18n="r5p">Close-up treatment reels edited for a clean, premium feel.</p></div></article>
-      <article class="rcase reveal" data-cat="family"><div class="rimg" style="background-image:url(timilou.jpg)"><img src="timilou.jpg" alt="Edited reel for Ti Milou centre with Arabic subtitles during a child assessment" decoding="async" fetchpriority="high"><span class="rbadge"><img src="lg-ti-milou-nursery.png" alt="" ></span><span class="rshade"></span><span class="rplay"></span></div><div class="rbody"><div class="meta" data-i18n="r6m">Family &amp; education</div><h3>Ti Milou</h3><p data-i18n="r6p">Educational reels with Arabic subtitles explaining the centre's sessions.</p></div></article>
-      <article class="rcase reveal" data-cat="fnb"><div class="rimg" style="background-image:url(khalifeh.jpg)"><img src="khalifeh.jpg" alt="Edited reel for Khalifeh Restaurant showing a grilled chicken platter" decoding="async" fetchpriority="high"><span class="rbadge"><img src="lg-khalifeh-restaurant.png" alt="" ></span><span class="rshade"></span><span class="rplay"></span></div><div class="rbody"><div class="meta" data-i18n="r7m">F&amp;B · Restaurant</div><h3>Khalifeh Restaurant</h3><p data-i18n="r7p">Mouth-watering food reels and stories, cut to music with close-up plating shots.</p></div></article>
+      <article class="rcase reveal" data-cat="family"><div class="rimg" style="background-image:url(timilou.jpg)"><img src="timilou.jpg" alt="Edited reel for Ti Milou centre with Arabic subtitles during a child assessment" decoding="async" fetchpriority="high"><span class="rbadge"><img loading="lazy" decoding="async" src="lg-ti-milou-nursery.png" alt="" ></span><span class="rshade"></span><span class="rplay"></span></div><div class="rbody"><div class="meta" data-i18n="r6m">Family &amp; education</div><h3>Ti Milou</h3><p data-i18n="r6p">Educational reels with Arabic subtitles explaining the centre's sessions.</p></div></article>
+      <article class="rcase reveal" data-cat="fnb"><div class="rimg" style="background-image:url(khalifeh.jpg)"><img src="khalifeh.jpg" alt="Edited reel for Khalifeh Restaurant showing a grilled chicken platter" decoding="async" fetchpriority="high"><span class="rbadge"><img loading="lazy" decoding="async" src="lg-khalifeh-restaurant.png" alt="" ></span><span class="rshade"></span><span class="rplay"></span></div><div class="rbody"><div class="meta" data-i18n="r7m">F&amp;B · Restaurant</div><h3>Khalifeh Restaurant</h3><p data-i18n="r7p">Mouth-watering food reels and stories, cut to music with close-up plating shots.</p></div></article>
       <article class="rcase reveal" data-cat="beauty"><div class="rimg" style="background-image:url(lana.jpg)"><img src="lana.jpg" alt="Edited reel for Lana Zone of Beauty with the specialist speaking to camera and Arabic subtitles" decoding="async" fetchpriority="high"><span class="rbadge txt">Lana Zone of Beauty</span><span class="rshade"></span><span class="rplay"></span></div><div class="rbody"><div class="meta" data-i18n="r8m">Beauty · Clinic</div><h3>Lana Zone of Beauty</h3><p data-i18n="r8p">Expert talking-head reels with Arabic subtitles that build trust before booking.</p></div></article>
-      <article class="rcase reveal" data-cat="hosp"><div class="rimg" style="background-image:url(heaven.jpg)"><img src="heaven.jpg" alt="Edited reel for Heaven Venue showing the venue sign at night" decoding="async" fetchpriority="high"><span class="rbadge"><img src="lg-heaven-venue.png" alt="" ></span><span class="rshade"></span><span class="rplay"></span></div><div class="rbody"><div class="meta" data-i18n="r9m">Hospitality · Wedding venue</div><h3>Heaven Venue</h3><p data-i18n="r9p">Day and night venue reels and wedding teasers for a garden events venue.</p></div></article>
+      <article class="rcase reveal" data-cat="hosp"><div class="rimg" style="background-image:url(heaven.jpg)"><img src="heaven.jpg" alt="Edited reel for Heaven Venue showing the venue sign at night" decoding="async" fetchpriority="high"><span class="rbadge"><img loading="lazy" decoding="async" src="lg-heaven-venue.png" alt="" ></span><span class="rshade"></span><span class="rplay"></span></div><div class="rbody"><div class="meta" data-i18n="r9m">Hospitality · Wedding venue</div><h3>Heaven Venue</h3><p data-i18n="r9p">Day and night venue reels and wedding teasers for a garden events venue.</p></div></article>
     </div>
     <p class="work-note" data-i18n="workNote">Stills taken from the final edited reels. Full videos are on our Instagram and TikTok.</p>
   </div>
@@ -1295,7 +1314,7 @@
       <span data-i18n="pfL1">Lebanon</span><span data-i18n="pfL2">Saudi Arabia</span><span data-i18n="pfL3">Syria</span><span data-i18n="pfL4">100+ clients in one year</span>
     </div>
     <div class="tv reveal"><div class="tv-frame"><div class="pf-view">
-      <img id="pfImg" src="pf-en33.jpg" alt="">
+      <img loading="lazy" decoding="async" id="pfImg" src="pf-en33.jpg" alt="">
       <button class="pf-arrow pf-prev" id="pfPrev" type="button" aria-label="Previous page">‹</button>
       <button class="pf-arrow pf-next" id="pfNext" type="button" aria-label="Next page">›</button>
       <span class="pf-count" id="pfCount"></span>
@@ -1313,7 +1332,7 @@
 <div class="pf-lb" id="pfLb" role="dialog" aria-modal="true" aria-label="Company profile">
   <button class="x" id="pfLbX" type="button" aria-label="Close">×</button>
   <button class="pf-arrow pf-prev" id="pfLbPrev" type="button" aria-label="Previous page">‹</button>
-  <img id="pfLbImg" src="" alt="">
+  <img loading="lazy" decoding="async" id="pfLbImg" src="" alt="">
   <button class="pf-arrow pf-next" id="pfLbNext" type="button" aria-label="Next page">›</button>
 </div>
 
@@ -1580,7 +1599,7 @@
     <h3 id="mTitle" data-i18n="mT">Meet the founders</h3>
     <p style="color:var(--ink-2);font-size:15px" data-i18n="mP">How can you open a marketing agency in Lebanon? Our founders tell the Qarar story.</p>
     <a href="https://www.instagram.com/reel/DZMzdZcFQrZ/" class="founder-vid">
-      <img src="founders.jpg" alt="Qarar co-founder in the founders' story reel">
+      <img loading="lazy" decoding="async" src="founders.jpg" alt="Qarar co-founder in the founders' story reel">
       <span class="fplay"><svg width="30" height="30" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#6B091D"/></svg></span>
     </a>
     <div style="display:flex;gap:10px;flex-wrap:wrap">
@@ -2322,7 +2341,7 @@ libRender();
 })();
 
 // gentle snowfall
-(function(){ const c=document.getElementById('snow'); if(!c||matchMedia('(prefers-reduced-motion: reduce)').matches) return; const x=c.getContext('2d'); let W,H,F=[];
+(function(){ const c=document.getElementById('snow'); if(!c||matchMedia('(prefers-reduced-motion: reduce)').matches||matchMedia('(max-width: 820px), (hover: none)').matches){ if(c) c.remove(); return; } const x=c.getContext('2d'); let W,H,F=[];
   function size(){ W=c.width=innerWidth; H=c.height=innerHeight; const n=Math.round(Math.min(90,W/16)); F=Array.from({length:n},()=>({x:Math.random()*W,y:Math.random()*H,r:1+Math.random()*2.6,s:.3+Math.random()*.9,d:Math.random()*6.28})); }
   size(); addEventListener('resize',size);
   (function tick(){ x.clearRect(0,0,W,H); for(const f of F){ f.y+=f.s; f.d+=.01; f.x+=Math.sin(f.d)*.4; if(f.y>H){f.y=-5;f.x=Math.random()*W;}

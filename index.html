@@ -1096,8 +1096,8 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="hero-art reveal" aria-hidden="false">
       <div class="tile t1"></div><div class="tile t2"></div><div class="tile t3"></div><div class="tile t4"></div>
       <div class="hero-card">
-        <div class="big">191K</div>
-        <div class="cap" data-i18n="heroStat">views on our own reels in 90 days (Aug to Nov 2026)</div>
+        <div class="big" data-stat="total">191K</div>
+        <div class="cap" data-i18n="heroStat">views on our own content in the last 90 days</div>
       </div>
       <button class="play" id="playBtn" aria-label="Watch the founders' intro">
         <svg width="26" height="26" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#6B091D"/></svg>
@@ -1249,10 +1249,10 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="numbers">
   <div class="wrap num-grid">
     <h2 class="reveal" data-i18n="numH2">We practise what we sell.</h2>
-    <div class="num reveal"><b>191K</b><span data-i18n="num1">views on Qarar's own Instagram in 90 days</span></div>
-    <div class="num reveal"><b>46K</b><span data-i18n="num2">unique accounts reached in the same period</span></div>
+    <div class="num reveal"><b data-stat="total">191K</b><span data-i18n="num1">views on Qarar's own channels in the last 90 days</span></div>
+    <div class="num reveal"><b>46K</b><span data-i18n="num2">unique Instagram accounts reached, Aug to Nov 2026</span></div>
     <div class="num reveal"><b>3–4</b><span data-i18n="num3">posts a week, every week, on our own channels</span></div>
-    <p class="num-note" data-i18n="numNote">Figures from Qarar's Instagram Insights, 16 Aug to 13 Nov 2026. Client results will be added here as case studies are approved.</p>
+    <p class="num-note" data-i18n="numNote">Views: Qarar's own Instagram, Facebook, TikTok and LinkedIn insights, last 90 days, updated daily. Reach: Instagram Insights, 16 Aug to 13 Nov 2026. Client results will be added here as case studies are approved.</p>
   </div>
 </div>
 
@@ -1654,7 +1654,7 @@ const AR = {
   heroH1:"صار الوقت <em>تاخد القرار</em>.",
   heroLead:"سوشيال ميديا، إعلانات ميتا وتيك توك، محتوى وفيديو ومواقع، مع فريق واحد بلغتين في بيروت يهمه أن يجلب لك زبائن، لا مجرد لايكات.",
   chip1:"إدارة السوشيال ميديا", chip2:"إعلانات ميتا وتيك توك", chip3:"محتوى وفيديو", chip4:"هوية بصرية", chip5:"مواقع وتطبيقات",
-  heroStat:"مشاهدة على ريلز حسابنا خلال 90 يوماً (آب – تشرين الثاني 2026)", heroStat2:"حساب وصلنا إليه خلال 90 يوماً، أي نحو 50 ضعف عدد متابعينا",
+  heroStat:"مشاهدة على محتوانا خلال آخر 90 يوماً", heroStat2:"حساب وصلنا إليه خلال 90 يوماً، أي نحو 50 ضعف عدد متابعينا",
   trustLbl:"علامات عملنا معها", trustMore:"+ علامتك التالية",
   svcEyebrow:"ماذا نقدّم", svcH2:"فريق واحد. كل القنوات.", svcP:"الاستراتيجية والمحتوى والإعلانات والموقع، نخطّطها معاً كي يعمل كل منشور وكل دولار لهدف واحد: زبائن أكثر.",
   s1t:"إدارة السوشيال ميديا", s1p:"خطة محتوى شهرية، تصميم، كابشن بالعربي والإنكليزي، نشر، ردود على الجمهور وتقرير شهري واضح.",
@@ -1664,8 +1664,8 @@ const AR = {
   s5t:"الهوية والتصميم", s5p:"شعارات، هوية بصرية، دليل العلامة، تغليف ومطبوعات، كي تبدو علامتك نفسها في كل مكان.",
   s6t:"مواقع وتطبيقات وSEO", s6p:"مواقع سريعة بلغتين، متاجر إلكترونية وظهور على غوغل، مربوطة بالواتساب وبإعلاناتك.",
   learn:"اطلب خطة ←", seeRaw:"شاهد باقات المونتاج ←", forAgencies:"للوكالات",
-  numH2:"نطبّق ما نبيعه.", num1:"مشاهدة على إنستغرام قرار خلال 90 يوماً", num2:"حساب فريد وصلنا إليه في الفترة نفسها", num3:"منشورات أسبوعياً، كل أسبوع، على قنواتنا",
-  numNote:"الأرقام من إحصاءات إنستغرام قرار، 16 آب حتى 13 تشرين الثاني 2026. ستُضاف نتائج العملاء هنا بعد موافقتهم.",
+  numH2:"نطبّق ما نبيعه.", num1:"مشاهدة على قنوات قرار خلال آخر 90 يوماً", num2:"حساب فريد على إنستغرام وصلنا إليه، آب – تشرين الثاني 2026", num3:"منشورات أسبوعياً، كل أسبوع، على قنواتنا",
+  numNote:"المشاهدات من إحصاءات قرار على إنستغرام وفيسبوك وتيك توك ولينكدإن لآخر 90 يوماً، وتُحدَّث يومياً. الوصول من إحصاءات إنستغرام، 16 آب حتى 13 تشرين الثاني 2026. ستُضاف نتائج العملاء هنا بعد موافقتهم.",
   workEyebrow:"أعمال مختارة", workH2:"قرارات كبّرت علامات.", workP:"ريلز صنعناها لعلامات لبنانية: بداية جاذبة، ترجمة بالعربي والإنكليزي، نصوص متحركة ودعوة واضحة للتواصل.",
   fAll:"الكل", fFnb:"مطاعم وأطعمة", fFamily:"عائلة وتعليم", fAgency:"مونتاج",
   c1m:"مطاعم وأطعمة · محتوى", c1t:"علامة مخبز على إنستغرام", c1p:"محتوى وريلز مشتركة مع Sift Bakery. تُنشر النتائج بعد موافقة العميل.",
@@ -2452,5 +2452,6 @@ clS.addEventListener('input',renderCl);
 
 applyLang();
 </script>
+<script src="/live-stats.js" defer></script>
 </body>
 </html>

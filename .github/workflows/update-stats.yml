@@ -1,0 +1,45 @@
+name: Update live view counts
+
+on:
+  schedule:
+    - cron: "17 3 * * *"   # every day at 03:17 UTC (05:17 Beirut)
+  workflow_dispatch:        # lets you press "Run workflow" manually
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch views from Instagram, Facebook, TikTok, LinkedIn
+        env:
+          META_ACCESS_TOKEN:     ${{ secrets.META_ACCESS_TOKEN }}
+          IG_USER_ID:            ${{ secrets.IG_USER_ID }}
+          FB_PAGE_ID:            ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN:         ${{ secrets.FB_PAGE_TOKEN }}
+          TIKTOK_BUSINESS_ID:    ${{ secrets.TIKTOK_BUSINESS_ID }}
+          TIKTOK_APP_ID:         ${{ secrets.TIKTOK_APP_ID }}
+          TIKTOK_APP_SECRET:     ${{ secrets.TIKTOK_APP_SECRET }}
+          TIKTOK_REFRESH_TOKEN:  ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+          TIKTOK_ACCESS_TOKEN:   ${{ secrets.TIKTOK_ACCESS_TOKEN }}
+          LINKEDIN_ORG_ID:       ${{ secrets.LINKEDIN_ORG_ID }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          STATS_WINDOW_DAYS:     "90"
+        # Change the path if your site lives in a subfolder (e.g. public/stats.json)
+        run: python3 fetch_stats.py --out stats.json
+
+      - name: Commit stats.json (this redeploys the site on GitHub Pages / Netlify / Vercel)
+        run: |
+          [ -f stats.json ] || { echo "No stats.json yet"; exit 0; }
+          git config user.name  "qarar-stats-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add stats.json
+          git diff --cached --quiet || git commit -m "Update live view counts $(date -u +%F)"
+          git push
